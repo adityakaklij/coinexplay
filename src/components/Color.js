@@ -1,17 +1,19 @@
-// Contract adddress - 0x183a0517473979c2E8C944D19Cc0D09A4E188751
-// Harmony
+// Contract Address = 0x9296E66aD7D78e58f100615EAA2935e5986448FF
+// Meta Account = 0xc221979949e0ACc4E1E715FbB232284f7eE412d4
+// Guess The Color
 
 import React, {  useState } from "react";
 import { Abi } from "./ColorAbi";
 import Web3 from "web3";
-
+import '../App.css'
 
 export default function Color() {
   
-const [connet , setConnect] = useState("Conncet")
+const [connet , setConnect] = useState("Connect")
 const [result , setResult] = useState("")
 const [youChoose , setyouChoose] = useState("")
 const [computerChoose , setComputerChoose] = useState()
+const [FinalwinnerData , setWinnerData] = useState("Data is comming")
 
   const connectBtn = () =>{
 
@@ -33,12 +35,12 @@ const [computerChoose , setComputerChoose] = useState()
   }
   async function loadContract() {
     
-      return await new window.web3.eth.Contract(Abi,"0xF7B469C6B10f458ef5B184F5EeD70b6018eC8377");
+      return await new window.web3.eth.Contract(Abi,"0x3B063d007203b19b96a4e3cd4c248973550aC37f");
   }
 
   async function getCurrentAccount() {
       const accounts = await window.web3.eth.getAccounts();
-      console.log( "clg from accountSS", accounts[0]);
+      // console.log( "clg from accountSS", accounts[0]);
       setConnect("Connected");
       return accounts[0];
   }
@@ -50,7 +52,7 @@ const [computerChoose , setComputerChoose] = useState()
             .send({
                 from: account,
                 gas: 60000,
-                gasPrice: 40000000000,
+                gasPrice: 800000000000,
                 value: amount,
               });
         displayResult(winnerData);
@@ -64,37 +66,40 @@ const [computerChoose , setComputerChoose] = useState()
 
     function getWinner() {
       let winner_number = Math.floor(Math.random() * 5);
-
       if (winner_number === 2) {
         let winner_number = Math.floor(Math.random() * 5);
         number = winner_number;
-        console.log("number:-  from violet", number);
+        // console.log("number:-  from violet", number);
+        setWinnerData(color[winner_number])
+        // console.log("Winner Data:- " , FinalwinnerData)
         return color[winner_number];
       } 
       else {
         number = winner_number;
-        console.log("number:- not from violet ", number);
+        // console.log("number:- not from violet ", number);
+        setWinnerData(color[winner_number])
+        // console.log("Winner Data:- " , FinalwinnerData)
         return color[winner_number];
       }
     }
 
     // Red color clicked by user.
     const redBtn = () => {
-      console.log("red btn")
+      // console.log("red btn")
 
       if (bool === "true"){
       buttonClicked("red");
 
       let p = getWinner();
       if (p === "red") {
-        console.log("red Wins!!");
+        // console.log("red Wins!!");
         setNumber(1);
         }
       else if (p === "redViolet") {
         setNumber(3);
         } 
       else {
-        console.log("You loose");
+        // console.log("You loose");
         setNumber(5);
       }
       updateWinner(p);
@@ -106,17 +111,17 @@ const [computerChoose , setComputerChoose] = useState()
 
     // Green color clicked by user.
     const greenBtn = () =>{
-      console.log("Green btn")
+      // console.log("Green btn")
       if (bool === "true"){
           buttonClicked("green");
           let p = getWinner();
           if (p === "green") {
-            console.log("green Wins!!");
+            // console.log("green Wins!!");
             setNumber(1);
           } else if (p === "greenviolet") {
             setNumber(3);
           } else {
-            console.log("You loose");
+            // console.log("You loose");
             setNumber(5);
           }
           updateWinner(p);
@@ -128,20 +133,20 @@ const [computerChoose , setComputerChoose] = useState()
 
     // Violet color clicked by user.
     const violetBtn = () =>{
-      console.log("violet btn")
+      // console.log("violet btn")
       if (bool === "true"){
 
           buttonClicked("violet");
           let p = getWinner();
           if (p === "violet") {
-              console.log("violet Wins!!");
+              // console.log("violet Wins!!");
               setNumber(2);
             } 
           else if (p === "redViolet" || p === "greenviolet") {
               setNumber(4);
             } 
           else {
-              console.log("You loose");
+              // console.log("You loose");
               setNumber(5);
           }
           updateWinner(p);
@@ -157,39 +162,39 @@ const [computerChoose , setComputerChoose] = useState()
         setComputerChoose("Loading..")
         if (x === "red") {
             setyouChoose("Red")
-            console.log("Red Button clicked");
+            // console.log("Red Button clicked");
         } else if (x === "green") {
             setyouChoose("Green")
-            console.log("green button clicked");
+            // console.log("green button clicked");
         } else {
             setyouChoose("Violet")
-            console.log("violet button clicked");
+            // console.log("violet button clicked");
         }
     }
 
     function updateWinner(p) {
-      console.log("p is ", p);
+      // console.log("p is ", p);
       setTimeout(() => {  
         setComputerChoose(p)
-      }, 10000);
+      }, 13000);
       
     }
 
     function displayResult(winnerData) {
       if (winnerData === 1 || winnerData === 2) {
-          console.log(" it's 1 or 2")
+          // console.log(" it's 1 or 2")
           setResult("You Won The Game!!")
         } 
       else if (winnerData === 3) {
-          console.log("it's 3")
+          // console.log("it's 3")
           setResult("You Also Won The Game!!")
         }
       else if (winnerData === 4) {
-          console.log("it's 4")
+          // console.log("it's 4")
           setResult("You Partically The Game!!")
         }
       else {
-          console.log("You lose the Game")
+          // console.log("You lose the Game")
           setResult("You Lose The Game")
       }
     }
@@ -202,7 +207,7 @@ const [computerChoose , setComputerChoose] = useState()
       if (bool === "true"){
           setNum( num + 1 )
         if (num >= 0){
-          setOp("Telos")
+          setOp("CETT")
           }
       }
       else{
@@ -227,23 +232,32 @@ const [computerChoose , setComputerChoose] = useState()
     }
 
     return (
-      <div>
-        <h2>From Color</h2>
-        <button className="btn-primary" onClick={connectBtn}>{connet}</button>
+      <div  style={ { backgroundColor :'rgba(95,209,249,1)' }}>
+        <h2 className="containerr mx-12" style={{fontWeight: "bold", color: "white" ,fontSize : '3em', paddingTop: '3%' }} >Guess The Color</h2>
+
+        <div className="connectBtn">
+            <button className="btn-primary" onClick={connectBtn}>{connet}</button>
+        </div>
         <br />
-        <button className="btn mx-3 my-3" onClick={redBtn} style = {{background : "red", color: "white"}}>Red</button>
-        <button className="btn mx-3 my-3" onClick={greenBtn} style = {{background : "green" , color: "white"}}>Green</button>
-        <button className="btn mx-3 my-3" onClick={violetBtn} style = {{background : "violet" ,color: "white"}}>Violet</button>
-      
+
+        <button className="btnn mx-3 my-3" onClick={redBtn} style = 
+                  {{background : "red"}}>Red</button>
+        <button className="btnn mx-3 my-3" onClick={greenBtn} style = 
+                  {{background : "green" , color: "white" , width : "6%"}}>Green</button>
+        <button className="btnn mx-3 my-3" onClick={violetBtn} style = 
+                  {{background : "#8F00FF" ,color: "white", width : "6%" }}>Violet</button>
+
         <br />
-        <h4 className='my-5'>Amount:- {num} {op}</h4>
-        <button className="btn-primary mx-2" onClick={increase}>Increase</button>
-        <button className="btn-primary mx-2" onClick={decrease}>Decrease</button>
+        <h4 className='my-5'style={{color : "white", fontSize: "1.7em"}}>Amount:- {num} {op}</h4>
+        <button className="btn-primarya mx-2" onClick={increase}>+</button>
+        <button className="btn-primarya mx-2" onClick={decrease}>-</button>
         <br />
-        <br />
-        <p>Computer got:- {computerChoose} </p>
-        <p>You Choose:- {youChoose}</p>
-        <p>Result:- {result} </p>
+
+          <div className="results">
+              <p>You Choose:- {youChoose}</p>
+              <p>Computer got:- {computerChoose} </p>
+              <p>Result:- {result} </p>
+          </div>
       </div>
     );
   }

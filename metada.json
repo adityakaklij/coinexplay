@@ -1,0 +1,126 @@
+{
+  "compiler": { "version": "0.8.0+commit.c7dfd78e" },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [
+          { "internalType": "uint256", "name": "_value", "type": "uint256" }
+        ],
+        "name": "enter",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getBalance",
+        "outputs": [
+          { "internalType": "uint256", "name": "", "type": "uint256" }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getRandomNumber",
+        "outputs": [
+          { "internalType": "uint256", "name": "", "type": "uint256" }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          { "internalType": "address", "name": "", "type": "address" }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          { "internalType": "uint256", "name": "", "type": "uint256" }
+        ],
+        "name": "playersA",
+        "outputs": [
+          { "internalType": "address payable", "name": "", "type": "address" }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          { "internalType": "uint256", "name": "", "type": "uint256" }
+        ],
+        "name": "playersB",
+        "outputs": [
+          { "internalType": "address payable", "name": "", "type": "address" }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          { "internalType": "uint256", "name": "", "type": "uint256" }
+        ],
+        "name": "playersC",
+        "outputs": [
+          { "internalType": "address payable", "name": "", "type": "address" }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "usersA",
+        "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "usersB",
+        "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "usersC",
+        "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "withdraw",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      }
+    ],
+    "devdoc": { "kind": "dev", "methods": {}, "version": 1 },
+    "userdoc": { "kind": "user", "methods": {}, "version": 1 }
+  },
+  "settings": {
+    "compilationTarget": { "contracts/Lottery.sol": "Lottery" },
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": { "bytecodeHash": "ipfs" },
+    "optimizer": { "enabled": false, "runs": 200 },
+    "remappings": []
+  },
+  "sources": {
+    "contracts/Lottery.sol": {
+      "keccak256": "0x63112f4a4dc5acb698f0a957493de0df711a8a695a6486f7ea52a7ab79c421f5",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://a6f8a62b8f2bf3f7565cb56726f21a8c004fbffb2ca24d26c80cc04d951949e0",
+        "dweb:/ipfs/QmNdZqJNfbHZ7m6WAp4u8NEFahdXTBMXzPecM1MUExCyE4"
+      ]
+    }
+  },
+  "version": 1
+}

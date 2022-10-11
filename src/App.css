@@ -38,6 +38,172 @@
 }
 
 .heading{
-  background-color: #61dafb;
   margin-top: 50px;
+}
+.btn-primarya{
+  background-color: aqua;
+  height: 30px;
+  width: 30px;
+  border-radius: 80%;
+  font-weight: bold;
+  align-items: center;
+  border-radius: none;
+  border: none;
+}
+
+.links{
+  text-decoration: none;
+  color: white;
+}
+
+.info{
+  display: flex;
+  align-items: center;
+  margin-left: 90px;
+  margin-top: 15vh;
+
+}
+
+.images img{
+  border-radius: 10%;
+  margin-left: 5%;
+}
+.images1 img{
+  border-radius: 10%;
+  margin-top: 30px;
+
+}
+
+.images1{
+  padding: 0%;
+  margin: 0%;
+}
+
+.images2 img{
+  border-radius: 10%;
+  margin-left: 10%;
+}
+
+.data{
+  margin-left: 10%;
+}
+
+.data   h3{
+  font-size: 3em;
+  color: #b92629;
+  font-weight: bold;
+}
+
+.data  p{
+  color: black;
+  font-size: 1em;
+}
+.data1   h3{
+  font-size: 3em;
+  color: #b92629;
+  font-weight: bold;
+}
+
+.data1  p{
+  color: black;
+  font-size: 1em;
+}
+
+section{
+  margin-bottom: 100px;
+}
+
+hr{
+  /* align-self: center; */
+  margin-left: 50%;
+}
+
+.clickButton{
+    width: 5%;
+    background-color: skyblue;
+    border: 4px solid whitesmoke;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.clickButton:hover{
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.connectBtn {
+  padding-top: 2%;
+}
+
+.connectBtn button{
+  padding: 5px 20px;
+  background-color: #0d6efd;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: 32x solid black;
+  font-weight: bold;
+}
+
+.results{
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  font-size: 1.3em;
+}
+
+.card-title1{
+  font-weight: bold;
+  font-size: 2em;
+  color: blue;
+  padding-top: '3%';
+}
+/* {{background : "red",color: "white", width : "6%", border: "1px solid white",  */
+  /* fontSize :'1.2em',fontWeight: "bold"}}>Red</button> */
+.btnn{
+  color: white;
+  width: 6%;
+  height: 40px;
+  border: 0.5px solid whitesmoke;
+  /* font-size: 1.2em; */
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btnLottery{
+  background-color: rgb(58, 58, 255);
+  color: white;
+  border-radius: 5px;
+  padding: 4px 10px;
+}
+
+body{
+  background-color:rgba(95,209,249,1);
+
+}
+
+.lucky{
+  background-color: #0d6efd;
+}
+
+.links:hover{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.ppp{
+  color: white;
+}
+
+.heading{
+  color: #b92629;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.navbar{
+  font-size: 1.2em;
+  padding-left: 50px;
+  padding-top: 20px;
 }

@@ -6,18 +6,18 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Test1 from './components/Test1';
-import Test2 from './components/Test2';
+import HowToPlay from './components/HowToPlay'
 import RockPaper from './components/RockPaper';
 import Color from './components/Color';
 import Home from './components/Home';
 import LuckyDraw from './components/LuckyDraw';
+import Footer from './components/Footer';
 
 
 
 function App() {
   return (
-    <Router>
+    <Router basename='/'>
     <div className="App">
        <Navbar/>
 
@@ -27,12 +27,8 @@ function App() {
             <Home/>
           </Route>
 
-          <Route exact path="/Test1">
-            <Test1/>
-          </Route>
-
-          <Route exact path="/Test2">
-            <Test2/>
+          <Route exact path="/HowToPlay">
+            <HowToPlay/>
           </Route>
 
           <Route exact path="/RockPaper">
@@ -47,11 +43,9 @@ function App() {
             <LuckyDraw/>
           </Route>
           
-          
-          
         </Switch>
 
-
+      <Footer/>
     </div>
     </Router>
   );
